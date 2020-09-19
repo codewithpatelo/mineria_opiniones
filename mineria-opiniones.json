@@ -1,0 +1,226 @@
+{
+  "Name": "mineria-opiniones",
+  "CreationDate": "2020-9-19",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "true",
+      "Value": " !errorIgnore"
+    },
+    {
+      "Command": "store",
+      "Target": "FAST",
+      "Value": "!replayspeed"
+    },
+    {
+      "Command": "store",
+      "Target": "glovo",
+      "Value": "product"
+    },
+    {
+      "Command": "open",
+      "Target": "https://play.google.com/store/apps/details?id=com.${product}&hl=es_AR&showAllReviews=true",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "css=div > div > c-wiz > div > div > div > div > main > div > div > div:nth-child(2) > c-wiz > div:nth-child(3) > div > div > div > span",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div/div[4]/c-wiz/div/div[2]/div/div/main/div/div/div[2]/c-wiz/div[3]/div/div[2]/div[2]",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "text",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "time",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "location",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "age_range",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "review_score",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "review_upvotes",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "painpoint_category",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "gainpoint_category",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "story",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "csvSave",
+      "Target": "opiniones_${product}",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "386",
+      "Value": "i"
+    },
+    {
+      "Command": "store",
+      "Target": "10",
+      "Value": "limit"
+    },
+    {
+      "Command": "label",
+      "Target": "extraerOpinion",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//div[${i}]/div/div[2]/div[2]",
+      "Value": ""
+    },
+    {
+      "Command": "XClick",
+      "Target": "vercompleto_dpi_96.png",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "300",
+      "Value": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//div[${i}]/div/div[2]/div[2]/span[1]",
+      "Value": "text"
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//div/div[4]/c-wiz/div/div[2]/div/div/main/div/div/div[2]/div/div[${i}]/div/div[2]/div/div/div/span[2]",
+      "Value": "time"
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "location"
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "age_range"
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "review_score"
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//div/div[4]/c-wiz/div/div[2]/div/div/main/div/div[1]/div[2]/div/div[${i}]/div/div[2]/div[1]/div[2]/div/div[1]/div[2]",
+      "Value": "review_upvotes"
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "painpoint_category"
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "gainpoint_category"
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "story"
+    },
+    {
+      "Command": "store",
+      "Target": "${text}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${time}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${location}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${age_range}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${review_score}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${review_upvotes}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${painpoint_category}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${gainpoint_category}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "store",
+      "Target": "${story}",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "csvSave",
+      "Target": "opiniones_${product}",
+      "Value": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number (${i}) + 1;",
+      "Value": "i"
+    },
+    {
+      "Command": "comment",
+      "Target": "while_v2 // ${i}  < ${limit}",
+      "Value": ""
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "extraerOpinion",
+      "Value": ""
+    }
+  ]
+}
