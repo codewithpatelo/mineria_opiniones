@@ -18,7 +18,7 @@ git clone https://github.com/codewithpatelo/mineria_opiniones.git
 
 ![title](2.png)
 
-3. Darle a "Install XModules"
+3. Darle a "Install XModules" (https://ui.vision/rpa/x/download)
 
 ![title](3.png)
 
