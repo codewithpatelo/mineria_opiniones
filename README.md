@@ -1,6 +1,8 @@
 # mineria_opiniones
 Pieza de código de automatización robotica de procesos para mineria de opiniones sobre productos basado en la herramienta de código abierto "Kantu, UI Vision" (A su vez basado en Selenium).
 
+Extrae opiniones/reseñas de GooglePlay sobre un producto de manera autómatica.
+
 
 ## Instrucciones
 
